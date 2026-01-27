@@ -1,0 +1,8 @@
+name: aruba-cx-test
+
+topology:
+  nodes:
+    node:
+      kind: aruba_aoscx
+      image: vrnetlab/aruba_arubaos-cx:20251216172414
+      #startup-config: myconfig.txt
