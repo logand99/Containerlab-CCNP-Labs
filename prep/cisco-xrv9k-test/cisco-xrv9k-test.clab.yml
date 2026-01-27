@@ -1,0 +1,7 @@
+name: cisco-xrv9k-test
+
+topology:
+  nodes:
+    node:
+      kind: cisco_xrv9k
+      image: vrnetlab/cisco_xrv9k:7.11.1
