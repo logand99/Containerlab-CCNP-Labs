@@ -1,0 +1,7 @@
+name: paloalto-test
+
+topology:
+  nodes:
+    ceos:
+      kind: paloalto_panos
+      image: vrnetlab/paloalto_pa-vm:11.2.3-h3
