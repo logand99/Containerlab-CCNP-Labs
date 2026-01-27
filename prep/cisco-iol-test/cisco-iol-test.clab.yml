@@ -1,0 +1,18 @@
+name: cisco-iol-test
+
+topology:
+  nodes:
+    iol-1:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.12.01
+    iol-2:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.12.01
+    iol-l2-1:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:L2-17.12.01
+      type: L2
+
+  links:
+    - endpoints: ["iol-1:Ethernet0/1","iol-2:Ethernet0/1"] 
+    - endpoints: ["iol-1:Ethernet1/3", "iol-2:Ethernet1/0"]
