@@ -1,0 +1,7 @@
+name: cisco-cat9k-test
+
+topology:
+  nodes:
+    cat9kv1:
+      kind: cisco_cat9kv
+      image: vrnetlab/cisco_cat9kv:17.12.01prd9
