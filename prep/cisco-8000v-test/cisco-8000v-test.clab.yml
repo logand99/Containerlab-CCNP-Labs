@@ -1,0 +1,13 @@
+name: cisco-8000v-test
+
+topology:
+  nodes:
+    edge:
+      kind: cisco_c8000v
+      type: controller  # For SD-WAN managed devices
+      image: vrnetlab/cisco_c8000v:controller-17.13.01a
+
+    c8000:
+      kind: cisco_c8000v
+      type: autonomous # default - IOS-XE routing
+      image: vrnetlab/cisco_c8000v:17.13.01a
