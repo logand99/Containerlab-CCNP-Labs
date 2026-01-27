@@ -1,0 +1,13 @@
+name: cisco-vios-test
+
+topology:
+  nodes:
+    router1:
+      kind: cisco_vios
+      type: router
+      image: vrnetlab/cisco_vios:159-3.m8
+
+    switch1:
+      kind: cisco_vios
+      type: switch
+      image: vrnetlab/cisco_vios:L2-20200929
