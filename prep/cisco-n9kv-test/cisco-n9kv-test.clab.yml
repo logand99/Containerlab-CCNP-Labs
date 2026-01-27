@@ -1,0 +1,7 @@
+name: cisco-n9kv-test
+
+topology:
+  nodes:
+    node:
+      kind: cisco_n9kv
+      image: vrnetlab/cisco_n9kv:9300-10.4.2
