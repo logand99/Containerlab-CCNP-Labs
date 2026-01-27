@@ -1,0 +1,7 @@
+name: cisco-1000v-test
+
+topology:
+  nodes:
+    node:
+      kind: cisco_csr1000v
+      image: vrnetlab/cisco_csr1000v:17.03.08
