@@ -1,0 +1,20 @@
+vlan 10
+name workstations
+!
+int gi0/1
+switchport mode access
+switchport access vlan 10
+desc Desktop-1
+no shut
+!
+int gi0/2
+switchport mode access
+switchport access vlan 10
+desc Desktop-1
+no shut
+!
+int gi0/3
+switchport mode access
+switchport access vlan 10
+desc Desktop-2
+no shut
