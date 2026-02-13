@@ -1,0 +1,8 @@
+int gi0/1
+ip address 10.20.30.1 255.255.255.0
+no shut
+!
+int gi0/2
+ip address 172.16.16.254 255.255.255.0
+no shut
+end
