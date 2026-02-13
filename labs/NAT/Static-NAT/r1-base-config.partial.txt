@@ -1,0 +1,14 @@
+int gi0/1
+ip address 192.168.10.1 255.255.255.0
+no shut
+ip nat inside
+!
+int gi0/2
+ip address 172.16.16.1 255.255.255.0
+no shut
+ip nat outside
+!
+ip route 10.20.30.0 255.255.255.0 172.16.16.254
+!
+ip nat inside source static tcp 192.168.10.25 8080 172.16.16.10 80
+end
