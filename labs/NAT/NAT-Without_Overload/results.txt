@@ -1,0 +1,6 @@
+R1#sh ip nat translations 
+Pro Inside global         Inside local          Outside local         Outside global
+--- 172.16.16.100         192.168.10.25         ---                   ---
+icmp 172.16.16.101:1      192.168.10.30:1       10.20.30.50:1         10.20.30.50:1
+--- 172.16.16.101         192.168.10.30         ---                   ---
+R1#
