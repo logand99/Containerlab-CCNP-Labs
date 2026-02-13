@@ -1,0 +1,35 @@
+name: NAT-Without-Overload
+
+topology:
+  nodes:
+    server:
+      kind: generic_vm
+      image: vrnetlab/canonical_ubuntu:jammy
+    R2:
+      kind: cisco_vios
+      type: router
+      image: vrnetlab/cisco_vios:159-3.m8
+      startup-config: r2-base-config.partial.txt
+    R1:
+      kind: cisco_vios
+      type: router
+      image: vrnetlab/cisco_vios:159-3.m8
+      startup-config: r1-base-config.partial.txt
+    SW1:
+      kind: cisco_vios
+      type: switch
+      image: vrnetlab/cisco_vios:L2-20200929
+      startup-config: sw1-base-config.partial.txt
+    Desktop-1:
+      kind: generic_vm
+      image: vrnetlab/canonical_ubuntu:jammy
+    Desktop-2:
+      kind: generic_vm
+      image: vrnetlab/canonical_ubuntu:jammy
+
+  links:
+    - endpoints: ["server:eth1","R2:Gi0"]
+    - endpoints: ["R2:Gi1","R1:Gi1"]
+    - endpoints: ["R1:Gi0","SW1:Gi0"]
+    - endpoints: ["SW1:Gi1","Desktop-1:eth1"]
+    - endpoints: ["SW1:Gi2","Desktop-2:eth1"]
