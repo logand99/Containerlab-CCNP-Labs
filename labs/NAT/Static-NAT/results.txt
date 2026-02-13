@@ -1,0 +1,5 @@
+R1#sh ip nat translations 
+Pro Inside global         Inside local          Outside local         Outside global
+tcp 172.16.16.10:80       192.168.10.25:8080    10.20.30.50:47236     10.20.30.50:47236
+tcp 172.16.16.10:80       192.168.10.25:8080    ---                   ---
+R1#
