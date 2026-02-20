@@ -1,0 +1,31 @@
+fhrp version vrrp v3
+!
+ip sla 10
+icmp-echo 10.20.30.50
+frequency 5
+!
+ip sla schedule 10 life forever start-time now
+!
+track 10 ip sla 10 reachability
+!
+int gi0/1
+ip address 192.168.10.12 255.255.255.0
+no shut
+vrrp 10 address-family ipv4
+timers advertise 330
+track 10 decrement 110
+address 192.168.10.1
+priority 150
+no preempt
+!
+int gi0/2
+ip address 10.20.30.12 255.255.255.0
+no shut
+vrrp 30 address-family ipv4
+timers advertise 330
+track 10 decrement 110
+address 10.20.30.1
+priority 150
+no preempt
+!
+end
