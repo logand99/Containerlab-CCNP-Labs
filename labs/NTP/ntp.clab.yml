@@ -1,0 +1,57 @@
+name: NTP
+
+topology:
+  nodes:
+    Core01:
+      kind: cisco_vios
+      type: router
+      image: vrnetlab/cisco_vios:159-3.m8
+      startup-config: core01-base-config.partial.txt
+    SW1:
+      kind: cisco_vios
+      type: switch
+      image: vrnetlab/cisco_vios:L2-20200929
+      startup-config: sw1-base-config.partial.txt
+      startup-delay: 120
+    EdgeR1:
+      kind: cisco_vios
+      type: router
+      image: vrnetlab/cisco_vios:159-3.m8
+      startup-config: edger1-base-config.partial.txt
+      startup-delay: 240
+    EdgeR2:
+      kind: cisco_vios
+      type: router
+      image: vrnetlab/cisco_vios:159-3.m8
+      startup-config: edger2-base-config.partial.txt
+      startup-delay: 360
+    Branch1:
+      kind: cisco_vios
+      type: router
+      image: vrnetlab/cisco_vios:159-3.m8
+      startup-config: branch1-base-config.partial.txt
+      startup-delay: 480
+    Branch2:
+      kind: cisco_vios
+      type: router
+      image: vrnetlab/cisco_vios:159-3.m8
+      startup-config: branch2-base-config.partial.txt
+      startup-delay: 600
+    NatBridge:
+      kind: host
+      exec:
+        - ip link set r1-nat0 master nat0
+        - ip link set r1-nat0 up
+
+  links:
+    - type: host
+      endpoint:
+        node: Core01
+        interface: Gi0
+      host-interface: r1-nat0
+    - endpoints: ["Core01:Gi1","SW1:Gi0"]
+    - endpoints: ["SW1:Gi1","EdgeR1:Gi0"]
+    - endpoints: ["SW1:Gi2","EdgeR2:Gi0"]
+    - endpoints: ["EdgeR1:Gi1","Branch1:Gi0"]
+    - endpoints: ["EdgeR2:Gi1","Branch2:Gi0"]
+

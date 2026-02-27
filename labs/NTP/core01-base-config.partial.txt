@@ -1,0 +1,29 @@
+ip name-server 1.1.1.1
+ip name-server 1.0.0.1
+!
+int gi0/1
+ip address dhcp
+no shut
+ip nat outside
+!
+int gi0/2
+ip address 10.10.1.254 255.255.255.0
+no shut
+ip nat inside
+!
+ip access-list standard 10
+100 permit 10.10.0.0 0.0.255.255
+!
+ip nat inside source list 10 interface gi0/1 overload
+!
+router eigrp 1
+network 10.10.1.0 0.0.0.255
+redistribute static metric 100000 1000 255 1 1500
+!
+clock timezone CST -6
+clock summer-time CDT recurring
+!
+ntp server time.google.com source GigabitEthernet0/1
+!
+ntp master 2
+end

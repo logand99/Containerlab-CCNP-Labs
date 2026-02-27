@@ -1,0 +1,20 @@
+int gi0/1
+ip address 10.10.1.2 255.255.255.0
+no shut
+!
+int gi0/2
+ip address 10.10.2.5 255.255.255.252
+no shut
+!
+router eigrp 1
+network 10.10.1.0 0.0.0.255
+network 10.10.2.4 0.0.0.3
+!
+clock timezone CST -6
+clock summer-time CDT recurring
+!
+ntp server 10.10.1.254 prefer
+ntp server 10.10.1.1
+!
+ntp master 3
+end

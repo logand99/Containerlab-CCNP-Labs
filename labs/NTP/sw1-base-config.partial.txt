@@ -1,0 +1,20 @@
+vlan 10
+name branch_networks
+!
+int gi0/1
+switchport mode access
+switchport access vlan 10
+desc Core01
+no shut
+!
+int gi0/2
+switchport mode access
+switchport access vlan 10
+desc EdgeR1
+no shut
+!
+int gi0/3
+switchport mode access
+switchport access vlan 10
+desc EdgeR2
+no shut
