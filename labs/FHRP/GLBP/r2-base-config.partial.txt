@@ -1,0 +1,13 @@
+int gi0/1
+ip address 192.168.10.12 255.255.255.0
+no shut
+glbp 10 ip 192.168.10.1
+glbp 10 priority 110
+!
+int gi0/2
+ip address 10.20.30.12 255.255.255.0
+no shut
+glbp 30 ip 10.20.30.1
+glbp 30 priority 110
+!
+end
