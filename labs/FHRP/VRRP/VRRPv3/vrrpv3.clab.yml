@@ -9,7 +9,7 @@ topology:
       kind: cisco_vios
       type: switch
       image: vrnetlab/cisco_vios:L2-20200929
-      startup-config: ../core-sw1-base-config.partial.txt
+      startup-config: ../../core-sw1-base-config.partial.txt
       stages:
         create:
           wait-for:
@@ -49,7 +49,7 @@ topology:
       kind: cisco_vios
       type: switch
       image: vrnetlab/cisco_vios:L2-20200929
-      startup-config: ../edge-sw1-base-config.partial.txt
+      startup-config: ../../edge-sw1-base-config.partial.txt
       stages:
         create:
           wait-for:
