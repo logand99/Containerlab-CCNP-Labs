@@ -1,0 +1,26 @@
+vlan 20
+name servers
+!
+int gi0/1
+switchport mode access
+switchport access vlan 20
+desc R1
+no shut
+!
+int gi0/2
+switchport mode access
+switchport access vlan 20
+desc R2
+no shut
+!
+int gi0/3
+switchport mode access
+switchport access vlan 20
+desc R3
+no shut
+!
+int gi1/0
+switchport mode access
+switchport access vlan 20
+desc server
+no shut
