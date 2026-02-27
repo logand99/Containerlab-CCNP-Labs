@@ -1,0 +1,15 @@
+int gi0/1
+ip address 192.168.10.13 255.255.255.0
+no shut
+standby version 2
+standby 10 ip 192.168.10.1
+standby 10 priority 100
+!
+int gi0/2
+ip address 10.20.30.13 255.255.255.0
+no shut
+standby version 2
+standby 30 ip 10.20.30.1
+standby 30 priority 100
+!
+end
