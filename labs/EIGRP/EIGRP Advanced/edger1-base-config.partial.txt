@@ -1,0 +1,23 @@
+int lo0
+ipv6 address fd44:b065:d58b:1::4/128
+no shut
+exit
+!
+int gi0/1
+desc CoreSW1-G1/1
+ipv6 address fd44:b065:d58b:2100::/64 eui-64
+no shut
+exit
+!
+int gi0/2
+desc EdgeR2-G0/2
+ipv6 address fd44:b065:d58b:2900::/64 eui-64
+no shut
+exit
+!
+ipv6 unicast-routing
+!
+router eigrp LAB
+address-family ipv6 autonomous-system 100
+eigrp router-id 4.4.4.4
+end

@@ -1,0 +1,60 @@
+CoreR1#sh ip eigrp topology all-links
+EIGRP-IPv4 Topology Table for AS(100)/ID(10.20.100.2)
+Codes: P - Passive, A - Active, U - Update, Q - Query, R - Reply,
+       r - reply Status, s - sia Status 
+
+P 10.20.100.3/32, 1 successors, FD is 409600, serno 7
+        via 10.10.200.18 (409600/128256), Ethernet0/3
+        via 10.10.200.5 (435200/409600), Ethernet0/2
+        via 10.10.200.1 (435200/409600), Ethernet0/1
+P 10.10.200.0/30, 1 successors, FD is 281600, serno 1
+        via Connected, Ethernet0/1
+        via 10.10.200.5 (307200/281600), Ethernet0/2
+P 10.10.200.16/30, 1 successors, FD is 281600, serno 3
+        via Connected, Ethernet0/3
+P 10.10.200.24/30, 2 successors, FD is 307200, serno 17
+        via 10.10.200.1 (307200/281600), Ethernet0/1
+        via 10.10.200.5 (307200/281600), Ethernet0/2
+        via 10.10.200.18 (332800/307200), Ethernet0/3
+P 10.10.200.20/30, 2 successors, FD is 307200, serno 16
+        via 10.10.200.1 (307200/281600), Ethernet0/1
+        via 10.10.200.5 (307200/281600), Ethernet0/2
+        via 10.10.200.18 (332800/307200), Ethernet0/3
+P 10.20.100.1/32, 2 successors, FD is 409600, serno 13
+        via 10.10.200.1 (409600/128256), Ethernet0/1
+        via 10.10.200.5 (409600/128256), Ethernet0/2
+        via 10.10.200.18 (435200/409600), Ethernet0/3
+P 10.10.200.28/30, 2 successors, FD is 332800, serno 22
+        via 10.10.200.1 (332800/307200), Ethernet0/1
+        via 10.10.200.5 (332800/307200), Ethernet0/2
+        via 10.10.200.18 (358400/332800), Ethernet0/3
+P 10.20.100.2/32, 1 successors, FD is 128256, serno 4
+        via Connected, Loopback0
+P 10.20.100.5/32, 2 successors, FD is 435200, serno 19
+        via 10.10.200.1 (435200/409600), Ethernet0/1
+        via 10.10.200.5 (435200/409600), Ethernet0/2
+        via 10.10.200.18 (460800/435200), Ethernet0/3
+P 10.10.200.12/30, 3 successors, FD is 307200, serno 15
+        via 10.10.200.1 (307200/281600), Ethernet0/1
+        via 10.10.200.5 (307200/281600), Ethernet0/2
+        via 10.10.200.18 (307200/281600), Ethernet0/3
+P 10.10.200.8/30, 3 successors, FD is 307200, serno 14
+        via 10.10.200.1 (307200/281600), Ethernet0/1
+        via 10.10.200.5 (307200/281600), Ethernet0/2
+        via 10.10.200.18 (307200/281600), Ethernet0/3
+P 10.20.100.4/32, 2 successors, FD is 435200, serno 23
+        via 10.10.200.1 (435200/409600), Ethernet0/1
+        via 10.10.200.5 (435200/409600), Ethernet0/2
+        via 10.10.200.18 (460800/435200), Ethernet0/3
+P 10.10.200.4/30, 1 successors, FD is 281600, serno 2
+        via Connected, Ethernet0/2
+        via 10.10.200.1 (307200/281600), Ethernet0/1
+
+CoreR1#sh ip eigrp neighbors
+EIGRP-IPv4 Neighbors for AS(100)
+H   Address                 Interface              Hold Uptime   SRTT   RTO  Q  Seq
+                                                   (sec)         (ms)       Cnt Num
+2   10.10.200.1             Et0/1                    11 00:47:28 1278  5000  0  33
+1   10.10.200.5             Et0/2                    10 00:47:28    1   100  0  32
+0   10.10.200.18            Et0/3                    11 00:47:32 1013  5000  0  16
+CoreR1#

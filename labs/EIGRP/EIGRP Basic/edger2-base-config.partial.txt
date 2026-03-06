@@ -1,0 +1,20 @@
+int lo0
+ip address 10.20.100.5 255.255.255.255
+no shut
+exit
+!
+int Ethernet0/1
+desc CoreSW1-E1/2
+ip address 10.10.200.26 255.255.255.252
+no shut
+exit
+!
+int Ethernet0/2
+desc EdgeR1-E0/2
+ip address 10.10.200.30 255.255.255.252
+no shut
+exit
+!
+router eigrp 100
+network 10.0.0.0 0.255.255.255
+exit

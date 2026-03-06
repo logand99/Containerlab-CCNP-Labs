@@ -1,0 +1,39 @@
+name: EIGRP-ADVANCED
+
+topology:
+  nodes:
+    CoreSW1:
+      kind: cisco_vios
+      type: switch
+      image: vrnetlab/cisco_vios:L2-20200929
+      startup-config: coresw1-base-config.partial.txt
+    CoreR1:
+      kind: cisco_vios
+      image: vrnetlab/cisco_vios:159-3.m8
+      startup-config: corer1-base-config.partial.txt
+      startup-delay: 120
+    CoreR2:
+      kind: cisco_vios
+      image: vrnetlab/cisco_vios:159-3.m8
+      startup-config: corer2-base-config.partial.txt
+      startup-delay: 240
+    EdgeR1:
+      kind: cisco_vios
+      image: vrnetlab/cisco_vios:159-3.m8
+      startup-config: edger1-base-config.partial.txt
+      startup-delay: 360
+    EdgeR2:
+      kind: cisco_vios
+      image: vrnetlab/cisco_vios:159-3.m8
+      startup-config: edger2-base-config.partial.txt
+      startup-delay: 480
+
+  links:
+    - endpoints: ["CoreSW1:Gi0","CoreR1:Gi0"]
+    - endpoints: ["CoreSW1:Gi1","CoreR1:Gi1"]
+    - endpoints: ["CoreSW1:Gi2","CoreR2:Gi0"]
+    - endpoints: ["CoreSW1:Gi3","CoreR2:Gi1"]
+    - endpoints: ["CoreSW1:Gi4","EdgeR1:Gi0"]
+    - endpoints: ["CoreSW1:Gi5","EdgeR2:Gi0"]
+    - endpoints: ["CoreR1:Gi2","CoreR2:Gi2"]
+    - endpoints: ["EdgeR1:Gi1","EdgeR2:Gi1"]

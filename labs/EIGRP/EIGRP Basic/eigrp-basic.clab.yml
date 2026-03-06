@@ -1,0 +1,35 @@
+name: EIGRP-BASIC
+
+topology:
+  nodes:
+    CoreSW1:
+      kind: cisco_iol
+      type: l2
+      image: vrnetlab/cisco_iol:L2-17.12.01
+      startup-config: coresw1-base-config.partial.txt
+    CoreR1:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.12.01
+      startup-config: corer1-base-config.partial.txt
+    CoreR2:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.12.01
+      startup-config: corer2-base-config.partial.txt
+    EdgeR1:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.12.01
+      startup-config: edger1-base-config.partial.txt
+    EdgeR2:
+      kind: cisco_iol
+      image: vrnetlab/cisco_iol:17.12.01
+      startup-config: edger2-base-config.partial.txt
+
+  links:
+    - endpoints: ["CoreSW1:Ethernet0/1","CoreR1:Ethernet0/1"]
+    - endpoints: ["CoreSW1:Ethernet0/2","CoreR1:Ethernet0/2"]
+    - endpoints: ["CoreSW1:Ethernet0/3","CoreR2:Ethernet0/1"]
+    - endpoints: ["CoreSW1:Ethernet1/0","CoreR2:Ethernet0/2"]
+    - endpoints: ["CoreSW1:Ethernet1/1","EdgeR1:Ethernet0/1"]
+    - endpoints: ["CoreSW1:Ethernet1/2","EdgeR2:Ethernet0/1"]
+    - endpoints: ["CoreR1:Ethernet0/3","CoreR2:Ethernet0/3"]
+    - endpoints: ["EdgeR1:Ethernet0/2","EdgeR2:Ethernet0/2"]

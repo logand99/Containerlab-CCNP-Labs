@@ -1,0 +1,611 @@
+CoreSW1#sh ipv6 eigrp interfaces 
+EIGRP-IPv6 VR(LAB) Address-Family Interfaces for AS(100)
+                              Xmit Queue   PeerQ        Mean   Pacing Time   Multicast    Pending
+Interface              Peers  Un/Reliable  Un/Reliable  SRTT   Un/Reliable   Flow Timer   Routes
+Gi0/1                    1        0/0       0/0         421       0/0         2104           0
+Gi0/2                    1        0/0       0/0         137       0/0          684           0
+Gi0/3                    1        0/0       0/0         820       0/0         4092           0
+Gi1/0                    1        0/0       0/0         821       0/0         4100           0
+Gi1/1                    1        0/0       0/0        1022       0/0         5108           0
+Gi1/2                    1        0/0       0/0        1596       0/0         7976           0
+Lo0                      0        0/0       0/0           0       0/0            0           0
+CoreSW1#sh ipv6 eigrp 100 events
+Event information for AS 100:
+1    23:37:44.973 Metric set: FD44:B065:D58B:1900::/64 metric(1966080) 
+2    23:37:44.972 Route installed: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FECF:D178 
+3    23:37:44.972 Route installing: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FECF:D178 
+4    23:37:44.972 Route installed: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FEC2:C90C 
+5    23:37:44.972 Route installing: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FEC2:C90C 
+6    23:37:44.972 Route installed: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FE6F:36C4 
+7    23:37:44.972 Route installing: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FE6F:36C4 
+8    23:37:44.972 Route installed: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FE5B:F2A3 
+9    23:37:44.972 Route installing: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FE5B:F2A3 
+10   23:37:44.972 RDB delete: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FEE5:258B 
+11   23:37:44.972 FC sat rdbmet/succmet: metric(1966080) metric(1310720) 
+12   23:37:44.972 FC sat nh/ndbmet: FE80::A8C1:ABFF:FE5B:F2A3 metric(1966080) 
+13   23:37:44.972 Find FS: FD44:B065:D58B:1900::/64 metric(1966080) 
+14   23:37:44.972 Rcv update met/succmet: metric(Infinity) metric(Infinity) 
+15   23:37:44.972 Rcv update dest/nh: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FEE5:258B 
+16   23:37:44.972 Metric set: FD44:B065:D58B:1::3/128 metric(1392640) 
+17   23:37:44.972 Route installing: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FECF:D178 
+18   23:37:44.972 Route installing: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FE6F:36C4 
+19   23:37:44.972 Route installed: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FEC2:C90C 
+20   23:37:44.972 Route installing: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FEC2:C90C 
+21   23:37:44.972 Route installed: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FE5B:F2A3 
+22   23:37:44.972 Route installing: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FE5B:F2A3 
+23   23:37:44.972 RDB delete: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FEE5:258B 
+24   23:37:44.972 FC sat rdbmet/succmet: metric(1392640) metric(163840) 
+25   23:37:44.972 FC sat nh/ndbmet: FE80::A8C1:ABFF:FE5B:F2A3 metric(1392640) 
+26   23:37:44.972 Find FS: FD44:B065:D58B:1::3/128 metric(1392640) 
+27   23:37:44.972 Rcv update met/succmet: metric(Infinity) metric(Infinity) 
+28   23:37:44.972 Rcv update dest/nh: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FEE5:258B 
+29   23:37:44.972 Metric set: FD44:B065:D58B:1::2/128 metric(1392640) 
+30   23:37:44.972 Route installing: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FEC2:C90C 
+31   23:37:44.972 Route installing: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FE5B:F2A3 
+32   23:37:44.972 Route installed: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FECF:D178 
+33   23:37:44.972 Route installing: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FECF:D178 
+34   23:37:44.972 Route installed: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FE6F:36C4 
+35   23:37:44.972 Route installing: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FE6F:36C4 
+36   23:37:44.972 RDB delete: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FEE5:258B 
+37   23:37:44.972 FC sat rdbmet/succmet: metric(1392640) metric(163840) 
+38   23:37:44.972 FC sat nh/ndbmet: FE80::A8C1:ABFF:FE6F:36C4 metric(1392640) 
+39   23:37:44.972 Find FS: FD44:B065:D58B:1::2/128 metric(1392640) 
+40   23:37:44.972 Rcv update met/succmet: metric(Infinity) metric(Infinity) 
+41   23:37:44.972 Rcv update dest/nh: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FEE5:258B 
+42   23:37:44.972 Metric set: FD44:B065:D58B:2100::/64 metric(1310720) 
+43   23:37:44.972 Route installing: FD44:B065:D58B:2100::/64 FE80::A8C1:ABFF:FEDD:935 
+44   23:37:44.972 RDB delete: FD44:B065:D58B:2100::/64 FE80::A8C1:ABFF:FEE5:258B 
+45   23:37:44.972 FC sat rdbmet/succmet: metric(1310720) metric(0) 
+46   23:37:44.972 FC sat nh/ndbmet: :: metric(1310720) 
+47   23:37:44.972 Find FS: FD44:B065:D58B:2100::/64 metric(1310720) 
+48   23:37:44.972 Rcv update met/succmet: metric(Infinity) metric(Infinity) 
+49   23:37:44.972 Rcv update dest/nh: FD44:B065:D58B:2100::/64 FE80::A8C1:ABFF:FEE5:258B 
+50   23:37:44.972 Poison squashed: FD44:B065:D58B:1202::/64 reverse 
+51   23:37:44.972 Ignored route, dup routerid int: 1.1.1.1 
+52   23:37:44.972 Poison squashed: FD44:B065:D58B:1::1/128 reverse 
+53   23:37:44.972 Ignored route, dup routerid int: 1.1.1.1 
+54   23:37:44.972 Poison squashed: FD44:B065:D58B:1201::/64 reverse 
+55   23:37:44.972 Ignored route, dup routerid int: 1.1.1.1 
+56   23:37:44.972 Poison squashed: FD44:B065:D58B:1102::/64 reverse 
+57   23:37:44.972 Ignored route, dup routerid int: 1.1.1.1 
+58   23:37:44.972 Poison squashed: FD44:B065:D58B:1101::/64 reverse 
+59   23:37:44.972 Ignored route, dup routerid int: 1.1.1.1 
+60   23:37:39.996 Poison squashed: FD44:B065:D58B:1::5/128 reverse 
+61   23:37:39.995 Poison squashed: FD44:B065:D58B:1::5/128 reverse 
+62   23:37:39.992 Poison squashed: FD44:B065:D58B:1::5/128 reverse 
+63   23:37:39.989 Poison squashed: FD44:B065:D58B:1::5/128 reverse 
+64   23:37:39.966 Metric set: FD44:B065:D58B:1900::/64 metric(1966080) 
+65   23:37:39.966 Route installing: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FEE5:258B 
+66   23:37:39.966 Route installed: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FECF:D178 
+67   23:37:39.966 Route installing: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FECF:D178 
+68   23:37:39.966 Route installed: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FEC2:C90C 
+69   23:37:39.966 Route installing: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FEC2:C90C 
+70   23:37:39.966 Route installed: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FE6F:36C4 
+71   23:37:39.966 Route installing: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FE6F:36C4 
+72   23:37:39.966 Route installed: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FE5B:F2A3 
+73   23:37:39.966 Route installing: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FE5B:F2A3 
+74   23:37:39.966 FC sat rdbmet/succmet: metric(1966080) metric(1310720) 
+75   23:37:39.966 FC sat nh/ndbmet: FE80::A8C1:ABFF:FE5B:F2A3 metric(1966080) 
+76   23:37:39.966 Find FS: FD44:B065:D58B:1900::/64 metric(1966080) 
+77   23:37:39.966 Rcv update met/succmet: metric(3932160) metric(3276800) 
+78   23:37:39.966 Rcv update dest/nh: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FEE5:258B 
+79   23:37:39.966 Metric set: FD44:B065:D58B:1::3/128 metric(1392640) 
+80   23:37:39.966 Route installing: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FECF:D178 
+81   23:37:39.966 Route installing: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FE6F:36C4 
+82   23:37:39.966 Route installing: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FEE5:258B 
+83   23:37:39.966 Route installed: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FEC2:C90C 
+84   23:37:39.966 Route installing: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FEC2:C90C 
+85   23:37:39.966 Route installed: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FE5B:F2A3 
+86   23:37:39.966 Route installing: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FE5B:F2A3 
+87   23:37:39.966 FC sat rdbmet/succmet: metric(1392640) metric(163840) 
+88   23:37:39.966 FC sat nh/ndbmet: FE80::A8C1:ABFF:FE5B:F2A3 metric(1392640) 
+89   23:37:39.966 Find FS: FD44:B065:D58B:1::3/128 metric(1392640) 
+90   23:37:39.966 Rcv update met/succmet: metric(3358720) metric(2703360) 
+91   23:37:39.966 Rcv update dest/nh: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FEE5:258B 
+92   23:37:39.966 Metric set: FD44:B065:D58B:1::2/128 metric(1392640) 
+93   23:37:39.966 Route installing: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FEC2:C90C 
+94   23:37:39.966 Route installing: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FE5B:F2A3 
+95   23:37:39.966 Route installing: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FEE5:258B 
+96   23:37:39.966 Route installed: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FECF:D178 
+97   23:37:39.966 Route installing: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FECF:D178 
+98   23:37:39.966 Route installed: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FE6F:36C4 
+99   23:37:39.966 Route installing: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FE6F:36C4 
+100  23:37:39.966 FC sat rdbmet/succmet: metric(1392640) metric(163840) 
+101  23:37:39.966 FC sat nh/ndbmet: FE80::A8C1:ABFF:FE6F:36C4 metric(1392640) 
+102  23:37:39.966 Find FS: FD44:B065:D58B:1::2/128 metric(1392640) 
+103  23:37:39.966 Rcv update met/succmet: metric(3358720) metric(2703360) 
+104  23:37:39.966 Rcv update dest/nh: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FEE5:258B 
+105  23:37:39.966 Ignored route, metric: FD44:B065:D58B:1202::/64 metric(3276800) 
+106  23:37:39.966 Ignored route, dup routerid int: 1.1.1.1 
+107  23:37:39.966 Ignored route, metric: FD44:B065:D58B:1::1/128 metric(2703360) 
+108  23:37:39.966 Ignored route, dup routerid int: 1.1.1.1 
+109  23:37:39.966 Ignored route, metric: FD44:B065:D58B:1201::/64 metric(3276800) 
+110  23:37:39.966 Ignored route, dup routerid int: 1.1.1.1 
+111  23:37:39.966 Ignored route, metric: FD44:B065:D58B:1102::/64 metric(3276800) 
+112  23:37:39.966 Ignored route, dup routerid int: 1.1.1.1 
+113  23:37:39.966 Ignored route, metric: FD44:B065:D58B:1101::/64 metric(3276800) 
+114  23:37:39.966 Ignored route, dup routerid int: 1.1.1.1 
+115  23:37:39.966 Metric set: FD44:B065:D58B:2100::/64 metric(1310720) 
+116  23:37:39.966 Route installing: FD44:B065:D58B:2100::/64 FE80::A8C1:ABFF:FEDD:935 
+117  23:37:39.966 Route installing: FD44:B065:D58B:2100::/64 FE80::A8C1:ABFF:FEE5:258B 
+118  23:37:39.966 FC sat rdbmet/succmet: metric(1310720) metric(0) 
+119  23:37:39.966 FC sat nh/ndbmet: :: metric(1310720) 
+120  23:37:39.966 Find FS: FD44:B065:D58B:2100::/64 metric(1310720) 
+121  23:37:39.966 Rcv update met/succmet: metric(2621440) metric(1966080) 
+122  23:37:39.966 Rcv update dest/nh: FD44:B065:D58B:2100::/64 FE80::A8C1:ABFF:FEE5:258B 
+123  23:37:39.966 Metric set: FD44:B065:D58B:1::4/128 metric(1392640) 
+124  23:37:39.966 Route installing: FD44:B065:D58B:1::4/128 FE80::A8C1:ABFF:FEE5:258B 
+125  23:37:39.966 Route installed: FD44:B065:D58B:1::4/128 FE80::A8C1:ABFF:FEDD:935 
+126  23:37:39.966 Route installing: FD44:B065:D58B:1::4/128 FE80::A8C1:ABFF:FEDD:935 
+127  23:37:39.966 FC sat rdbmet/succmet: metric(1392640) metric(163840) 
+128  23:37:39.966 FC sat nh/ndbmet: FE80::A8C1:ABFF:FEDD:935 metric(1392640) 
+129  23:37:39.966 Find FS: FD44:B065:D58B:1::4/128 metric(1392640) 
+130  23:37:39.966 Rcv update met/succmet: metric(2048000) metric(1392640) 
+131  23:37:39.966 Rcv update dest/nh: FD44:B065:D58B:1::4/128 FE80::A8C1:ABFF:FEE5:258B 
+132  23:37:39.961 Change queue emptied, entries: 2 
+133  23:37:39.961 Route OBE net/refcount: FD44:B065:D58B:2900::/64 6 
+134  23:37:39.961 Route OBE net/refcount: FD44:B065:D58B:1::5/128 6 
+135  23:37:39.961 Metric set: FD44:B065:D58B:2900::/64 metric(1966080) 
+136  23:37:39.961 Update reason, delay: new if delay(20000000) 
+137  23:37:39.961 Update sent, RD: FD44:B065:D58B:2900::/64 metric(1966080) 
+138  23:37:39.961 Route installed: FD44:B065:D58B:2900::/64 FE80::A8C1:ABFF:FEE5:258B 
+139  23:37:39.961 Route installing: FD44:B065:D58B:2900::/64 FE80::A8C1:ABFF:FEE5:258B 
+140  23:37:39.961 Route installed: FD44:B065:D58B:2900::/64 FE80::A8C1:ABFF:FEDD:935 
+141  23:37:39.961 Route installing: FD44:B065:D58B:2900::/64 FE80::A8C1:ABFF:FEDD:935 
+142  23:37:39.961 FC sat rdbmet/succmet: metric(1966080) metric(1310720) 
+143  23:37:39.961 FC sat nh/ndbmet: FE80::A8C1:ABFF:FEDD:935 metric(1966080) 
+144  23:37:39.961 Find FS: FD44:B065:D58B:2900::/64 metric(1966080) 
+145  23:37:39.961 Rcv update met/succmet: metric(1966080) metric(1310720) 
+146  23:37:39.961 Rcv update dest/nh: FD44:B065:D58B:2900::/64 FE80::A8C1:ABFF:FEE5:258B 
+147  23:37:39.961 Metric set: FD44:B065:D58B:2200::/64 metric(1310720) 
+148  23:37:39.961 Route installing: FD44:B065:D58B:2200::/64 FE80::A8C1:ABFF:FEE5:258B 
+149  23:37:39.961 FC sat rdbmet/succmet: metric(1310720) metric(0) 
+150  23:37:39.961 FC sat nh/ndbmet: :: metric(1310720) 
+151  23:37:39.961 Find FS: FD44:B065:D58B:2200::/64 metric(1310720) 
+152  23:37:39.961 Rcv update met/succmet: metric(1966080) metric(1310720) 
+153  23:37:39.961 Rcv update dest/nh: FD44:B065:D58B:2200::/64 FE80::A8C1:ABFF:FEE5:258B 
+154  23:37:39.960 Metric set: FD44:B065:D58B:1::5/128 metric(1392640) 
+155  23:37:39.960 Update reason, delay: new if delay(21250000) 
+156  23:37:39.960 Update sent, RD: FD44:B065:D58B:1::5/128 metric(2048000) 
+157  23:37:39.960 Update reason, delay: metric chg delay(21250000) 
+158  23:37:39.960 Update sent, RD: FD44:B065:D58B:1::5/128 metric(2048000) 
+159  23:37:39.960 Route installed: FD44:B065:D58B:1::5/128 FE80::A8C1:ABFF:FEE5:258B 
+160  23:37:39.960 Route installing: FD44:B065:D58B:1::5/128 FE80::A8C1:ABFF:FEE5:258B 
+161  23:37:39.960 Route installed: FD44:B065:D58B:1::5/128 FE80::A8C1:ABFF:FEDD:935 
+162  23:37:39.960 Route installing: FD44:B065:D58B:1::5/128 FE80::A8C1:ABFF:FEDD:935 
+163  23:37:39.960 FC sat rdbmet/succmet: metric(1392640) metric(163840) 
+164  23:37:39.960 FC sat nh/ndbmet: FE80::A8C1:ABFF:FEE5:258B metric(2048000) 
+165  23:37:39.960 Find FS: FD44:B065:D58B:1::5/128 metric(2048000) 
+166  23:37:39.960 Rcv update met/succmet: metric(1392640) metric(163840) 
+167  23:37:39.960 Rcv update dest/nh: FD44:B065:D58B:1::5/128 FE80::A8C1:ABFF:FEE5:258B 
+168  23:37:38.539 Poison squashed: FD44:B065:D58B:1::5/128 reverse 
+169  23:37:38.538 Poison squashed: FD44:B065:D58B:1::5/128 reverse 
+170  23:37:38.533 Poison squashed: FD44:B065:D58B:1::5/128 reverse 
+171  23:37:38.533 Poison squashed: FD44:B065:D58B:1::5/128 reverse 
+172  23:37:38.504 Change queue emptied, entries: 1 
+173  23:37:38.504 Poison squashed: FD44:B065:D58B:2200::/64 reverse 
+174  23:37:38.504 Ignored route, dup routerid int: 1.1.1.1 
+175  23:37:38.504 Metric set: FD44:B065:D58B:1::5/128 metric(2048000) 
+176  23:37:38.504 Update reason, delay: new if delay(Infinity) 
+177  23:37:38.504 Update sent, RD: FD44:B065:D58B:1::5/128 metric(Infinity) 
+178  23:37:38.504 Update reason, delay: metric chg delay(Infinity) 
+179  23:37:38.504 Update sent, RD: FD44:B065:D58B:1::5/128 metric(Infinity) 
+180  23:37:38.504 Route installed: FD44:B065:D58B:1::5/128 FE80::A8C1:ABFF:FEDD:935 
+181  23:37:38.504 Route installing: FD44:B065:D58B:1::5/128 FE80::A8C1:ABFF:FEDD:935 
+182  23:37:38.504 Find FS: FD44:B065:D58B:1::5/128 metric(Infinity) 
+183  23:37:38.504 Rcv update met/succmet: metric(2048000) metric(1392640) 
+184  23:37:38.504 Rcv update dest/nh: FD44:B065:D58B:1::5/128 FE80::A8C1:ABFF:FEDD:935 
+185  23:37:38.504 Metric set: FD44:B065:D58B:1::5/128 metric(Infinity) 
+186  23:37:37.960 Rcv peer INIT: FE80::A8C1:ABFF:FEE5:258B GigabitEthernet1/2 
+187  23:35:42.268 Poison squashed: FD44:B065:D58B:1900::/64 reverse 
+188  23:35:42.268 Poison squashed: FD44:B065:D58B:1::3/128 reverse 
+189  23:35:42.268 Poison squashed: FD44:B065:D58B:1::2/128 reverse 
+190  23:35:42.268 Poison squashed: FD44:B065:D58B:2200::/64 reverse 
+191  23:35:42.268 Ignored route, dup routerid int: 1.1.1.1 
+192  23:35:42.268 Poison squashed: FD44:B065:D58B:1202::/64 reverse 
+193  23:35:42.268 Ignored route, dup routerid int: 1.1.1.1 
+194  23:35:42.268 Poison squashed: FD44:B065:D58B:1::1/128 reverse 
+195  23:35:42.268 Ignored route, dup routerid int: 1.1.1.1 
+196  23:35:42.268 Poison squashed: FD44:B065:D58B:1201::/64 reverse 
+197  23:35:42.267 Ignored route, dup routerid int: 1.1.1.1 
+198  23:35:42.267 Poison squashed: FD44:B065:D58B:1102::/64 reverse 
+199  23:35:42.267 Ignored route, dup routerid int: 1.1.1.1 
+200  23:35:42.267 Poison squashed: FD44:B065:D58B:1101::/64 reverse 
+201  23:35:42.267 Ignored route, dup routerid int: 1.1.1.1 
+202  23:35:37.290 Poison squashed: FD44:B065:D58B:2900::/64 reverse 
+203  23:35:37.290 Poison squashed: FD44:B065:D58B:1::4/128 reverse 
+204  23:35:37.290 Poison squashed: FD44:B065:D58B:2900::/64 reverse 
+205  23:35:37.290 Poison squashed: FD44:B065:D58B:1::4/128 reverse 
+206  23:35:37.285 Poison squashed: FD44:B065:D58B:2900::/64 reverse 
+207  23:35:37.285 Poison squashed: FD44:B065:D58B:1::4/128 reverse 
+208  23:35:37.284 Poison squashed: FD44:B065:D58B:2900::/64 reverse 
+209  23:35:37.284 Poison squashed: FD44:B065:D58B:1::4/128 reverse 
+210  23:35:37.262 Change queue emptied, entries: 1 
+211  23:35:37.262 Metric set: FD44:B065:D58B:2900::/64 metric(1966080) 
+212  23:35:37.262 Update reason, delay: new if delay(Infinity) 
+213  23:35:37.262 Update sent, RD: FD44:B065:D58B:2900::/64 metric(Infinity) 
+214  23:35:37.262 Update reason, delay: metric chg delay(Infinity) 
+215  23:35:37.262 Update sent, RD: FD44:B065:D58B:2900::/64 metric(Infinity) 
+216  23:35:37.262 Route installed: FD44:B065:D58B:2900::/64 FE80::A8C1:ABFF:FEDD:935 
+217  23:35:37.262 Route installing: FD44:B065:D58B:2900::/64 FE80::A8C1:ABFF:FEDD:935 
+218  23:35:37.262 Find FS: FD44:B065:D58B:2900::/64 metric(Infinity) 
+219  23:35:37.262 Rcv update met/succmet: metric(1966080) metric(1310720) 
+220  23:35:37.262 Rcv update dest/nh: FD44:B065:D58B:2900::/64 FE80::A8C1:ABFF:FEDD:935 
+221  23:35:37.262 Metric set: FD44:B065:D58B:2900::/64 metric(Infinity) 
+222  23:35:37.262 Metric set: FD44:B065:D58B:2100::/64 metric(1310720) 
+223  23:35:37.262 Route installing: FD44:B065:D58B:2100::/64 FE80::A8C1:ABFF:FEDD:935 
+224  23:35:37.262 FC sat rdbmet/succmet: metric(1310720) metric(0) 
+225  23:35:37.262 FC sat nh/ndbmet: :: metric(1310720) 
+226  23:35:37.262 Find FS: FD44:B065:D58B:2100::/64 metric(1310720) 
+227  23:35:37.262 Rcv update met/succmet: metric(1966080) metric(1310720) 
+228  23:35:37.262 Rcv update dest/nh: FD44:B065:D58B:2100::/64 FE80::A8C1:ABFF:FEDD:935 
+229  23:35:37.257 Change queue emptied, entries: 1 
+230  23:35:37.257 Metric set: FD44:B065:D58B:1::4/128 metric(1392640) 
+231  23:35:37.257 Update reason, delay: new if delay(Infinity) 
+232  23:35:37.257 Update sent, RD: FD44:B065:D58B:1::4/128 metric(Infinity) 
+233  23:35:37.257 Update reason, delay: metric chg delay(Infinity) 
+234  23:35:37.257 Update sent, RD: FD44:B065:D58B:1::4/128 metric(Infinity) 
+235  23:35:37.257 Route installed: FD44:B065:D58B:1::4/128 FE80::A8C1:ABFF:FEDD:935 
+236  23:35:37.256 Route installing: FD44:B065:D58B:1::4/128 FE80::A8C1:ABFF:FEDD:935 
+237  23:35:37.256 Find FS: FD44:B065:D58B:1::4/128 metric(Infinity) 
+238  23:35:37.256 Rcv update met/succmet: metric(1392640) metric(163840) 
+239  23:35:37.256 Rcv update dest/nh: FD44:B065:D58B:1::4/128 FE80::A8C1:ABFF:FEDD:935 
+240  23:35:37.256 Metric set: FD44:B065:D58B:1::4/128 metric(Infinity) 
+241  23:35:35.260 Rcv peer INIT: FE80::A8C1:ABFF:FEDD:935 GigabitEthernet1/1 
+242  23:33:48.350 Poison squashed: FD44:B065:D58B:2200::/64 reverse 
+243  23:33:48.350 Ignored route, dup routerid int: 1.1.1.1 
+244  23:33:48.350 Poison squashed: FD44:B065:D58B:2100::/64 reverse 
+245  23:33:48.350 Ignored route, dup routerid int: 1.1.1.1 
+246  23:33:48.350 Poison squashed: FD44:B065:D58B:1::1/128 reverse 
+247  23:33:48.350 Ignored route, dup routerid int: 1.1.1.1 
+248  23:33:48.350 Poison squashed: FD44:B065:D58B:1102::/64 reverse 
+249  23:33:48.350 Ignored route, dup routerid int: 1.1.1.1 
+250  23:33:48.350 Poison squashed: FD44:B065:D58B:1101::/64 reverse 
+251  23:33:48.350 Ignored route, dup routerid int: 1.1.1.1 
+252  23:33:48.350 Poison squashed: FD44:B065:D58B:2200::/64 reverse 
+253  23:33:48.350 Ignored route, dup routerid int: 1.1.1.1 
+254  23:33:48.350 Poison squashed: FD44:B065:D58B:2100::/64 reverse 
+255  23:33:48.350 Ignored route, dup routerid int: 1.1.1.1 
+256  23:33:48.350 Poison squashed: FD44:B065:D58B:1::1/128 reverse 
+257  23:33:48.350 Ignored route, dup routerid int: 1.1.1.1 
+258  23:33:48.350 Poison squashed: FD44:B065:D58B:1102::/64 reverse 
+259  23:33:48.350 Ignored route, dup routerid int: 1.1.1.1 
+260  23:33:48.350 Poison squashed: FD44:B065:D58B:1101::/64 reverse 
+261  23:33:48.350 Ignored route, dup routerid int: 1.1.1.1 
+262  23:33:47.556 Poison squashed: FD44:B065:D58B:2200::/64 reverse 
+263  23:33:47.556 Ignored route, dup routerid int: 1.1.1.1 
+264  23:33:47.556 Poison squashed: FD44:B065:D58B:2100::/64 reverse 
+265  23:33:47.556 Ignored route, dup routerid int: 1.1.1.1 
+266  23:33:47.556 Poison squashed: FD44:B065:D58B:1::1/128 reverse 
+267  23:33:47.556 Ignored route, dup routerid int: 1.1.1.1 
+268  23:33:47.556 Metric set: FD44:B065:D58B:1102::/64 metric(1310720) 
+269  23:33:47.556 Route installing: FD44:B065:D58B:1102::/64 FE80::A8C1:ABFF:FECF:D178 
+270  23:33:47.556 Route installing: FD44:B065:D58B:1102::/64 FE80::A8C1:ABFF:FE6F:36C4 
+271  23:33:47.556 RDB delete: FD44:B065:D58B:1102::/64 FE80::A8C1:ABFF:FEC2:C90C 
+272  23:33:47.556 FC sat rdbmet/succmet: metric(1310720) metric(0) 
+273  23:33:47.556 FC sat nh/ndbmet: :: metric(1310720) 
+274  23:33:47.556 Find FS: FD44:B065:D58B:1102::/64 metric(1310720) 
+275  23:33:47.556 Rcv update met/succmet: metric(Infinity) metric(Infinity) 
+276  23:33:47.556 Rcv update dest/nh: FD44:B065:D58B:1102::/64 FE80::A8C1:ABFF:FEC2:C90C 
+277  23:33:47.556 Ignored route, dup routerid int: 1.1.1.1 
+278  23:33:47.556 Metric set: FD44:B065:D58B:1101::/64 metric(1310720) 
+279  23:33:47.556 Route installing: FD44:B065:D58B:1101::/64 FE80::A8C1:ABFF:FECF:D178 
+280  23:33:47.556 Route installing: FD44:B065:D58B:1101::/64 FE80::A8C1:ABFF:FE6F:36C4 
+281  23:33:47.556 RDB delete: FD44:B065:D58B:1101::/64 FE80::A8C1:ABFF:FEC2:C90C 
+282  23:33:47.556 FC sat rdbmet/succmet: metric(1310720) metric(0) 
+283  23:33:47.556 FC sat nh/ndbmet: :: metric(1310720) 
+284  23:33:47.556 Find FS: FD44:B065:D58B:1101::/64 metric(1310720) 
+285  23:33:47.556 Rcv update met/succmet: metric(Infinity) metric(Infinity) 
+286  23:33:47.556 Rcv update dest/nh: FD44:B065:D58B:1101::/64 FE80::A8C1:ABFF:FEC2:C90C 
+287  23:33:47.556 Ignored route, dup routerid int: 1.1.1.1 
+288  23:33:47.556 Metric set: FD44:B065:D58B:1102::/64 metric(1310720) 
+289  23:33:47.556 Route installing: FD44:B065:D58B:1102::/64 FE80::A8C1:ABFF:FECF:D178 
+290  23:33:47.556 Route installing: FD44:B065:D58B:1102::/64 FE80::A8C1:ABFF:FE6F:36C4 
+291  23:33:47.556 Route installing: FD44:B065:D58B:1102::/64 FE80::A8C1:ABFF:FEC2:C90C 
+292  23:33:47.556 RDB delete: FD44:B065:D58B:1102::/64 FE80::A8C1:ABFF:FE5B:F2A3 
+293  23:33:47.556 FC sat rdbmet/succmet: metric(1310720) metric(0) 
+294  23:33:47.556 FC sat nh/ndbmet: :: metric(1310720) 
+295  23:33:47.556 Find FS: FD44:B065:D58B:1102::/64 metric(1310720) 
+296  23:33:47.556 Rcv update met/succmet: metric(Infinity) metric(Infinity) 
+297  23:33:47.556 Rcv update dest/nh: FD44:B065:D58B:1102::/64 FE80::A8C1:ABFF:FE5B:F2A3 
+298  23:33:47.556 Metric set: FD44:B065:D58B:1101::/64 metric(1310720) 
+299  23:33:47.556 Route installing: FD44:B065:D58B:1101::/64 FE80::A8C1:ABFF:FECF:D178 
+300  23:33:47.556 Route installing: FD44:B065:D58B:1101::/64 FE80::A8C1:ABFF:FE6F:36C4 
+301  23:33:47.556 Route installing: FD44:B065:D58B:1101::/64 FE80::A8C1:ABFF:FEC2:C90C 
+302  23:33:47.556 RDB delete: FD44:B065:D58B:1101::/64 FE80::A8C1:ABFF:FE5B:F2A3 
+303  23:33:47.556 FC sat rdbmet/succmet: metric(1310720) metric(0) 
+304  23:33:47.556 FC sat nh/ndbmet: :: metric(1310720) 
+305  23:33:47.556 Find FS: FD44:B065:D58B:1101::/64 metric(1310720) 
+306  23:33:47.556 Rcv update met/succmet: metric(Infinity) metric(Infinity) 
+307  23:33:47.556 Rcv update dest/nh: FD44:B065:D58B:1101::/64 FE80::A8C1:ABFF:FE5B:F2A3 
+308  23:33:47.556 Ignored route, metric: FD44:B065:D58B:2200::/64 metric(2621440) 
+309  23:33:47.555 Ignored route, dup routerid int: 1.1.1.1 
+310  23:33:47.555 Ignored route, metric: FD44:B065:D58B:2100::/64 metric(2621440) 
+311  23:33:47.555 Ignored route, dup routerid int: 1.1.1.1 
+312  23:33:47.555 Ignored route, metric: FD44:B065:D58B:1::1/128 metric(2048000) 
+313  23:33:47.555 Ignored route, dup routerid int: 1.1.1.1 
+314  23:33:47.555 Ignored route, metric: FD44:B065:D58B:1102::/64 metric(2621440) 
+315  23:33:47.555 Ignored route, dup routerid int: 1.1.1.1 
+316  23:33:47.555 Ignored route, metric: FD44:B065:D58B:1101::/64 metric(2621440) 
+317  23:33:47.555 Ignored route, dup routerid int: 1.1.1.1 
+318  23:33:43.340 Ignored route, metric: FD44:B065:D58B:2200::/64 metric(3276800) 
+319  23:33:43.340 Ignored route, dup routerid int: 1.1.1.1 
+320  23:33:43.340 Ignored route, metric: FD44:B065:D58B:2100::/64 metric(3276800) 
+321  23:33:43.339 Ignored route, dup routerid int: 1.1.1.1 
+322  23:33:43.339 Ignored route, metric: FD44:B065:D58B:1::1/128 metric(2703360) 
+323  23:33:43.339 Ignored route, dup routerid int: 1.1.1.1 
+324  23:33:43.339 Metric set: FD44:B065:D58B:1102::/64 metric(1310720) 
+325  23:33:43.339 Route installing: FD44:B065:D58B:1102::/64 FE80::A8C1:ABFF:FECF:D178 
+326  23:33:43.339 Route installing: FD44:B065:D58B:1102::/64 FE80::A8C1:ABFF:FE6F:36C4 
+327  23:33:43.339 Route installing: FD44:B065:D58B:1102::/64 FE80::A8C1:ABFF:FEC2:C90C 
+328  23:33:43.339 Route installing: FD44:B065:D58B:1102::/64 FE80::A8C1:ABFF:FE5B:F2A3 
+329  23:33:43.339 FC sat rdbmet/succmet: metric(1310720) metric(0) 
+330  23:33:43.339 FC sat nh/ndbmet: :: metric(1310720) 
+331  23:33:43.339 Find FS: FD44:B065:D58B:1102::/64 metric(1310720) 
+332  23:33:43.339 Rcv update met/succmet: metric(2621440) metric(1966080) 
+333  23:33:43.339 Rcv update dest/nh: FD44:B065:D58B:1102::/64 FE80::A8C1:ABFF:FE5B:F2A3 
+334  23:33:43.339 Metric set: FD44:B065:D58B:1101::/64 metric(1310720) 
+335  23:33:43.339 Route installing: FD44:B065:D58B:1101::/64 FE80::A8C1:ABFF:FECF:D178 
+336  23:33:43.339 Route installing: FD44:B065:D58B:1101::/64 FE80::A8C1:ABFF:FE6F:36C4 
+337  23:33:43.339 Route installing: FD44:B065:D58B:1101::/64 FE80::A8C1:ABFF:FEC2:C90C 
+338  23:33:43.339 Route installing: FD44:B065:D58B:1101::/64 FE80::A8C1:ABFF:FE5B:F2A3 
+339  23:33:43.339 FC sat rdbmet/succmet: metric(1310720) metric(0) 
+340  23:33:43.339 FC sat nh/ndbmet: :: metric(1310720) 
+341  23:33:43.339 Find FS: FD44:B065:D58B:1101::/64 metric(1310720) 
+342  23:33:43.339 Rcv update met/succmet: metric(2621440) metric(1966080) 
+343  23:33:43.339 Rcv update dest/nh: FD44:B065:D58B:1101::/64 FE80::A8C1:ABFF:FE5B:F2A3 
+344  23:33:43.339 Metric set: FD44:B065:D58B:1::2/128 metric(1392640) 
+345  23:33:43.339 Route installing: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FEC2:C90C 
+346  23:33:43.339 Route installing: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FE5B:F2A3 
+347  23:33:43.339 Route installed: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FECF:D178 
+348  23:33:43.339 Route installing: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FECF:D178 
+349  23:33:43.339 Route installed: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FE6F:36C4 
+350  23:33:43.339 Route installing: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FE6F:36C4 
+351  23:33:43.339 FC sat rdbmet/succmet: metric(1392640) metric(163840) 
+352  23:33:43.339 FC sat nh/ndbmet: FE80::A8C1:ABFF:FE6F:36C4 metric(1392640) 
+353  23:33:43.339 Find FS: FD44:B065:D58B:1::2/128 metric(1392640) 
+354  23:33:43.339 Rcv update met/succmet: metric(2048000) metric(1392640) 
+355  23:33:43.339 Rcv update dest/nh: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FE5B:F2A3 
+356  23:33:43.334 Change queue emptied, entries: 2 
+357  23:33:43.334 Route OBE net/refcount: FD44:B065:D58B:1900::/64 4 
+358  23:33:43.334 Route OBE net/refcount: FD44:B065:D58B:1::3/128 4 
+359  23:33:43.334 Metric set: FD44:B065:D58B:1900::/64 metric(1966080) 
+360  23:33:43.334 Update reason, delay: new if delay(20000000) 
+361  23:33:43.334 Update sent, RD: FD44:B065:D58B:1900::/64 metric(1966080) 
+362  23:33:43.334 Route installed: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FE5B:F2A3 
+363  23:33:43.334 Route installing: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FE5B:F2A3 
+364  23:33:43.334 Route installed: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FECF:D178 
+365  23:33:43.334 Route installing: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FECF:D178 
+366  23:33:43.334 Route installed: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FEC2:C90C 
+367  23:33:43.334 Route installing: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FEC2:C90C 
+368  23:33:43.334 Route installed: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FE6F:36C4 
+369  23:33:43.334 Route installing: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FE6F:36C4 
+370  23:33:43.334 FC sat rdbmet/succmet: metric(1966080) metric(1310720) 
+371  23:33:43.334 FC sat nh/ndbmet: FE80::A8C1:ABFF:FE6F:36C4 metric(1966080) 
+372  23:33:43.334 Find FS: FD44:B065:D58B:1900::/64 metric(1966080) 
+373  23:33:43.334 Rcv update met/succmet: metric(1966080) metric(1310720) 
+374  23:33:43.334 Rcv update dest/nh: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FE5B:F2A3 
+375  23:33:43.333 Metric set: FD44:B065:D58B:1202::/64 metric(1310720) 
+376  23:33:43.333 Route installing: FD44:B065:D58B:1202::/64 FE80::A8C1:ABFF:FEC2:C90C 
+377  23:33:43.333 Route installing: FD44:B065:D58B:1202::/64 FE80::A8C1:ABFF:FE5B:F2A3 
+378  23:33:43.333 FC sat rdbmet/succmet: metric(1310720) metric(0) 
+379  23:33:43.333 FC sat nh/ndbmet: :: metric(1310720) 
+380  23:33:43.333 Find FS: FD44:B065:D58B:1202::/64 metric(1310720) 
+381  23:33:43.333 Rcv update met/succmet: metric(1966080) metric(1310720) 
+382  23:33:43.333 Rcv update dest/nh: FD44:B065:D58B:1202::/64 FE80::A8C1:ABFF:FE5B:F2A3 
+383  23:33:43.333 Metric set: FD44:B065:D58B:1201::/64 metric(1310720) 
+384  23:33:43.333 Route installing: FD44:B065:D58B:1201::/64 FE80::A8C1:ABFF:FEC2:C90C 
+385  23:33:43.333 Route installing: FD44:B065:D58B:1201::/64 FE80::A8C1:ABFF:FE5B:F2A3 
+386  23:33:43.333 FC sat rdbmet/succmet: metric(1310720) metric(0) 
+387  23:33:43.333 FC sat nh/ndbmet: :: metric(1310720) 
+388  23:33:43.333 Find FS: FD44:B065:D58B:1201::/64 metric(1310720) 
+389  23:33:43.333 Rcv update met/succmet: metric(1966080) metric(1310720) 
+390  23:33:43.333 Rcv update dest/nh: FD44:B065:D58B:1201::/64 FE80::A8C1:ABFF:FE5B:F2A3 
+391  23:33:43.333 Metric set: FD44:B065:D58B:1::3/128 metric(1392640) 
+392  23:33:43.333 Update reason, delay: new if delay(11250000) 
+393  23:33:43.333 Update sent, RD: FD44:B065:D58B:1::3/128 metric(1392640) 
+394  23:33:43.333 Route installing: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FECF:D178 
+395  23:33:43.333 Route installing: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FE6F:36C4 
+396  23:33:43.333 Route installed: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FE5B:F2A3 
+397  23:33:43.333 Route installing: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FE5B:F2A3 
+398  23:33:43.333 Route installed: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FEC2:C90C 
+399  23:33:43.333 Route installing: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FEC2:C90C 
+400  23:33:43.333 FC sat rdbmet/succmet: metric(1392640) metric(163840) 
+401  23:33:43.333 FC sat nh/ndbmet: FE80::A8C1:ABFF:FEC2:C90C metric(1392640) 
+402  23:33:43.333 Find FS: FD44:B065:D58B:1::3/128 metric(1392640) 
+403  23:33:43.333 Rcv update met/succmet: metric(1392640) metric(163840) 
+404  23:33:43.333 Rcv update dest/nh: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FE5B:F2A3 
+405  23:33:42.549 Change queue emptied, entries: 1 
+406  23:33:42.549 Route OBE net/refcount: FD44:B065:D58B:1900::/64 4 
+407  23:33:42.549 Ignored route, metric: FD44:B065:D58B:2200::/64 metric(3276800) 
+408  23:33:42.549 Ignored route, dup routerid int: 1.1.1.1 
+409  23:33:42.549 Ignored route, metric: FD44:B065:D58B:2100::/64 metric(3276800) 
+410  23:33:42.549 Ignored route, dup routerid int: 1.1.1.1 
+411  23:33:42.549 Ignored route, metric: FD44:B065:D58B:1::1/128 metric(2703360) 
+412  23:33:42.549 Ignored route, dup routerid int: 1.1.1.1 
+413  23:33:42.549 Metric set: FD44:B065:D58B:1102::/64 metric(1310720) 
+414  23:33:42.549 Route installing: FD44:B065:D58B:1102::/64 FE80::A8C1:ABFF:FECF:D178 
+415  23:33:42.549 Route installing: FD44:B065:D58B:1102::/64 FE80::A8C1:ABFF:FE6F:36C4 
+416  23:33:42.549 Route installing: FD44:B065:D58B:1102::/64 FE80::A8C1:ABFF:FEC2:C90C 
+417  23:33:42.549 FC sat rdbmet/succmet: metric(1310720) metric(0) 
+418  23:33:42.549 FC sat nh/ndbmet: :: metric(1310720) 
+419  23:33:42.549 Find FS: FD44:B065:D58B:1102::/64 metric(1310720) 
+420  23:33:42.549 Rcv update met/succmet: metric(2621440) metric(1966080) 
+421  23:33:42.549 Rcv update dest/nh: FD44:B065:D58B:1102::/64 FE80::A8C1:ABFF:FEC2:C90C 
+422  23:33:42.549 Metric set: FD44:B065:D58B:1101::/64 metric(1310720) 
+423  23:33:42.549 Route installing: FD44:B065:D58B:1101::/64 FE80::A8C1:ABFF:FECF:D178 
+424  23:33:42.549 Route installing: FD44:B065:D58B:1101::/64 FE80::A8C1:ABFF:FE6F:36C4 
+425  23:33:42.549 Route installing: FD44:B065:D58B:1101::/64 FE80::A8C1:ABFF:FEC2:C90C 
+426  23:33:42.549 FC sat rdbmet/succmet: metric(1310720) metric(0) 
+427  23:33:42.549 FC sat nh/ndbmet: :: metric(1310720) 
+428  23:33:42.549 Find FS: FD44:B065:D58B:1101::/64 metric(1310720) 
+429  23:33:42.549 Rcv update met/succmet: metric(2621440) metric(1966080) 
+430  23:33:42.549 Rcv update dest/nh: FD44:B065:D58B:1101::/64 FE80::A8C1:ABFF:FEC2:C90C 
+431  23:33:42.549 Metric set: FD44:B065:D58B:1::2/128 metric(1392640) 
+432  23:33:42.549 Route installing: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FEC2:C90C 
+433  23:33:42.549 Route installed: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FECF:D178 
+434  23:33:42.549 Route installing: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FECF:D178 
+435  23:33:42.549 Route installed: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FE6F:36C4 
+436  23:33:42.549 Route installing: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FE6F:36C4 
+437  23:33:42.549 FC sat rdbmet/succmet: metric(1392640) metric(163840) 
+438  23:33:42.549 FC sat nh/ndbmet: FE80::A8C1:ABFF:FE6F:36C4 metric(1392640) 
+439  23:33:42.549 Find FS: FD44:B065:D58B:1::2/128 metric(1392640) 
+440  23:33:42.549 Rcv update met/succmet: metric(2048000) metric(1392640) 
+441  23:33:42.549 Rcv update dest/nh: FD44:B065:D58B:1::2/128 FE80::A8C1:ABFF:FEC2:C90C 
+442  23:33:42.549 Metric set: FD44:B065:D58B:1900::/64 metric(1966080) 
+443  23:33:42.549 Update reason, delay: new if delay(20000000) 
+444  23:33:42.549 Update sent, RD: FD44:B065:D58B:1900::/64 metric(1966080) 
+445  23:33:42.549 Route installed: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FEC2:C90C 
+446  23:33:42.548 Route installing: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FEC2:C90C 
+447  23:33:42.548 Route installed: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FECF:D178 
+448  23:33:42.548 Route installing: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FECF:D178 
+449  23:33:42.548 Route installed: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FE6F:36C4 
+450  23:33:42.548 Route installing: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FE6F:36C4 
+451  23:33:42.548 FC sat rdbmet/succmet: metric(1966080) metric(1310720) 
+452  23:33:42.548 FC sat nh/ndbmet: FE80::A8C1:ABFF:FE6F:36C4 metric(1966080) 
+453  23:33:42.548 Find FS: FD44:B065:D58B:1900::/64 metric(1966080) 
+454  23:33:42.548 Rcv update met/succmet: metric(1966080) metric(1310720) 
+455  23:33:42.548 Rcv update dest/nh: FD44:B065:D58B:1900::/64 FE80::A8C1:ABFF:FEC2:C90C 
+456  23:33:42.544 Change queue emptied, entries: 1 
+457  23:33:42.544 Route OBE net/refcount: FD44:B065:D58B:1::3/128 4 
+458  23:33:42.544 Metric set: FD44:B065:D58B:1202::/64 metric(1310720) 
+459  23:33:42.544 Route installing: FD44:B065:D58B:1202::/64 FE80::A8C1:ABFF:FEC2:C90C 
+460  23:33:42.544 FC sat rdbmet/succmet: metric(1310720) metric(0) 
+461  23:33:42.544 FC sat nh/ndbmet: :: metric(1310720) 
+462  23:33:42.544 Find FS: FD44:B065:D58B:1202::/64 metric(1310720) 
+463  23:33:42.544 Rcv update met/succmet: metric(1966080) metric(1310720) 
+464  23:33:42.544 Rcv update dest/nh: FD44:B065:D58B:1202::/64 FE80::A8C1:ABFF:FEC2:C90C 
+465  23:33:42.544 Metric set: FD44:B065:D58B:1201::/64 metric(1310720) 
+466  23:33:42.544 Route installing: FD44:B065:D58B:1201::/64 FE80::A8C1:ABFF:FEC2:C90C 
+467  23:33:42.544 FC sat rdbmet/succmet: metric(1310720) metric(0) 
+468  23:33:42.544 FC sat nh/ndbmet: :: metric(1310720) 
+469  23:33:42.544 Find FS: FD44:B065:D58B:1201::/64 metric(1310720) 
+470  23:33:42.544 Rcv update met/succmet: metric(1966080) metric(1310720) 
+471  23:33:42.544 Rcv update dest/nh: FD44:B065:D58B:1201::/64 FE80::A8C1:ABFF:FEC2:C90C 
+472  23:33:42.544 Metric set: FD44:B065:D58B:1::3/128 metric(1392640) 
+473  23:33:42.544 Update reason, delay: new if delay(21250000) 
+474  23:33:42.544 Update sent, RD: FD44:B065:D58B:1::3/128 metric(2048000) 
+475  23:33:42.544 Update reason, delay: metric chg delay(21250000) 
+476  23:33:42.544 Update sent, RD: FD44:B065:D58B:1::3/128 metric(2048000) 
+477  23:33:42.544 Route installed: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FEC2:C90C 
+478  23:33:42.543 Route installing: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FEC2:C90C 
+479  23:33:42.543 Route installed: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FECF:D178 
+480  23:33:42.543 Route installing: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FECF:D178 
+481  23:33:42.543 Route installed: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FE6F:36C4 
+482  23:33:42.543 Route installing: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FE6F:36C4 
+483  23:33:42.543 FC sat rdbmet/succmet: metric(1392640) metric(163840) 
+484  23:33:42.543 FC sat nh/ndbmet: FE80::A8C1:ABFF:FEC2:C90C metric(2048000) 
+485  23:33:42.543 Find FS: FD44:B065:D58B:1::3/128 metric(2048000) 
+486  23:33:42.543 Rcv update met/succmet: metric(1392640) metric(163840) 
+487  23:33:42.543 Rcv update dest/nh: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FEC2:C90C 
+488  23:33:41.740 Change queue emptied, entries: 1 
+489  23:33:41.740 Poison squashed: FD44:B065:D58B:1202::/64 reverse 
+490  23:33:41.740 Poison squashed: FD44:B065:D58B:1201::/64 reverse 
+491  23:33:41.740 Metric set: FD44:B065:D58B:1::3/128 metric(2048000) 
+492  23:33:41.740 Update reason, delay: new if delay(21250000) 
+493  23:33:41.740 Update sent, RD: FD44:B065:D58B:1::3/128 metric(2048000) 
+494  23:33:41.740 Route installed: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FECF:D178 
+495  23:33:41.740 Route installing: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FECF:D178 
+496  23:33:41.740 Route installed: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FE6F:36C4 
+497  23:33:41.740 Route installing: FD44:B065:D58B:1::3/128 FE80::A8C1:ABFF:FE6F:36C4 
+498  23:33:41.740 FC sat rdbmet/succmet: metric(2048000) metric(1392640) 
+499  23:33:41.740 FC sat nh/ndbmet: FE80::A8C1:ABFF:FE6F:36C4 metric(2048000) 
+500  23:33:41.740 Find FS: FD44:B065:D58B:1::3/128 metric(2048000) 
+CoreSW1#         
+CoreSW1#sh ipv6 eigr
+CoreSW1#sh ipv6 eigrp to
+CoreSW1#sh ipv6 eigrp topology 
+EIGRP-IPv6 VR(LAB) Topology Table for AS(100)/ID(1.1.1.1)
+Codes: P - Passive, A - Active, U - Update, Q - Query, R - Reply,
+       r - reply Status, s - sia Status 
+
+P FD44:B065:D58B:2900::/64, 2 successors, FD is 1966080
+        via FE80::A8C1:ABFF:FEDD:935 (1966080/1310720), GigabitEthernet1/1
+        via FE80::A8C1:ABFF:FEE5:258B (1966080/1310720), GigabitEthernet1/2
+P FD44:B065:D58B:1::1/128, 1 successors, FD is 163840
+        via Connected, Loopback0
+P FD44:B065:D58B:1::2/128, 2 successors, FD is 1392640
+        via FE80::A8C1:ABFF:FE6F:36C4 (1392640/163840), GigabitEthernet0/2
+        via FE80::A8C1:ABFF:FECF:D178 (1392640/163840), GigabitEthernet0/1
+P FD44:B065:D58B:1101::/64, 1 successors, FD is 1310720
+        via Connected, GigabitEthernet0/1
+P FD44:B065:D58B:1900::/64, 4 successors, FD is 1966080
+        via FE80::A8C1:ABFF:FE5B:F2A3 (1966080/1310720), GigabitEthernet0/3
+        via FE80::A8C1:ABFF:FE6F:36C4 (1966080/1310720), GigabitEthernet0/2
+        via FE80::A8C1:ABFF:FEC2:C90C (1966080/1310720), GigabitEthernet1/0
+        via FE80::A8C1:ABFF:FECF:D178 (1966080/1310720), GigabitEthernet0/1
+P FD44:B065:D58B:2200::/64, 1 successors, FD is 1310720
+        via Connected, GigabitEthernet1/2
+P FD44:B065:D58B:1102::/64, 1 successors, FD is 1310720
+        via Connected, GigabitEthernet0/2
+P FD44:B065:D58B:2100::/64, 1 successors, FD is 1310720
+        via Connected, GigabitEthernet1/1
+P FD44:B065:D58B:1202::/64, 1 successors, FD is 1310720
+        via Connected, GigabitEthernet1/0
+P FD44:B065:D58B:1201::/64, 1 successors, FD is 1310720
+        via Connected, GigabitEthernet0/3
+P FD44:B065:D58B:1::3/128, 2 successors, FD is 1392640
+        via FE80::A8C1:ABFF:FE5B:F2A3 (1392640/163840), GigabitEthernet0/3
+        via FE80::A8C1:ABFF:FEC2:C90C (1392640/163840), GigabitEthernet1/0
+P FD44:B065:D58B:1::4/128, 1 successors, FD is 1392640
+        via FE80::A8C1:ABFF:FEDD:935 (1392640/163840), GigabitEthernet1/1
+P FD44:B065:D58B:1::5/128, 1 successors, FD is 1392640
+        via FE80::A8C1:ABFF:FEE5:258B (1392640/163840), GigabitEthernet1/2
+
+CoreSW1#sh ipv6 route
+IPv6 Routing Table - default - 20 entries
+Codes: C - Connected, L - Local, S - Static, U - Per-user Static route
+       B - BGP, R - RIP, I1 - ISIS L1, I2 - ISIS L2
+       IA - ISIS interarea, IS - ISIS summary, D - EIGRP, EX - EIGRP external
+       ND - ND Default, NDp - ND Prefix, DCE - Destination, NDr - Redirect
+       RL - RPL, O - OSPF Intra, OI - OSPF Inter, OE1 - OSPF ext 1
+       OE2 - OSPF ext 2, ON1 - OSPF NSSA ext 1, ON2 - OSPF NSSA ext 2
+       la - LISP alt, lr - LISP site-registrations, ld - LISP dyn-eid
+       lA - LISP away, a - Application
+LC  FD44:B065:D58B:1::1/128 [0/0]
+     via Loopback0, receive
+D   FD44:B065:D58B:1::2/128 [90/10880]
+     via FE80::A8C1:ABFF:FECF:D178, GigabitEthernet0/1
+     via FE80::A8C1:ABFF:FE6F:36C4, GigabitEthernet0/2
+D   FD44:B065:D58B:1::3/128 [90/10880]
+     via FE80::A8C1:ABFF:FEC2:C90C, GigabitEthernet1/0
+     via FE80::A8C1:ABFF:FE5B:F2A3, GigabitEthernet0/3
+D   FD44:B065:D58B:1::4/128 [90/10880]
+     via FE80::A8C1:ABFF:FEDD:935, GigabitEthernet1/1
+D   FD44:B065:D58B:1::5/128 [90/10880]
+     via FE80::A8C1:ABFF:FEE5:258B, GigabitEthernet1/2
+C   FD44:B065:D58B:1101::/64 [0/0]
+     via GigabitEthernet0/1, directly connected
+L   FD44:B065:D58B:1101:A8C1:ABFF:FED0:6BCA/128 [0/0]
+     via GigabitEthernet0/1, receive
+C   FD44:B065:D58B:1102::/64 [0/0]
+     via GigabitEthernet0/2, directly connected
+L   FD44:B065:D58B:1102:A8C1:ABFF:FEEB:7B21/128 [0/0]
+     via GigabitEthernet0/2, receive
+C   FD44:B065:D58B:1201::/64 [0/0]
+     via GigabitEthernet0/3, directly connected
+L   FD44:B065:D58B:1201:A8C1:ABFF:FEA8:DF7C/128 [0/0]
+     via GigabitEthernet0/3, receive
+C   FD44:B065:D58B:1202::/64 [0/0]
+     via GigabitEthernet1/0, directly connected
+L   FD44:B065:D58B:1202:A8C1:ABFF:FE03:9F06/128 [0/0]
+     via GigabitEthernet1/0, receive
+D   FD44:B065:D58B:1900::/64 [90/15360]
+     via FE80::A8C1:ABFF:FECF:D178, GigabitEthernet0/1
+     via FE80::A8C1:ABFF:FE6F:36C4, GigabitEthernet0/2
+     via FE80::A8C1:ABFF:FEC2:C90C, GigabitEthernet1/0
+     via FE80::A8C1:ABFF:FE5B:F2A3, GigabitEthernet0/3
+C   FD44:B065:D58B:2100::/64 [0/0]
+     via GigabitEthernet1/1, directly connected
+L   FD44:B065:D58B:2100:A8C1:ABFF:FE30:4F8F/128 [0/0]
+     via GigabitEthernet1/1, receive
+C   FD44:B065:D58B:2200::/64 [0/0]
+     via GigabitEthernet1/2, directly connected
+L   FD44:B065:D58B:2200:A8C1:ABFF:FEE6:AD81/128 [0/0]
+     via GigabitEthernet1/2, receive
+D   FD44:B065:D58B:2900::/64 [90/15360]
+     via FE80::A8C1:ABFF:FEDD:935, GigabitEthernet1/1
+     via FE80::A8C1:ABFF:FEE5:258B, GigabitEthernet1/2
+L   FF00::/8 [0/0]
+     via Null0, receive
+CoreSW1#

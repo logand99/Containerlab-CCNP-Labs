@@ -1,0 +1,53 @@
+int lo0
+ipv6 address fd44:b065:d58b:1::1/128
+no shut
+exit
+!
+int gi0/1
+desc CoreR1-G0/1
+no switchport
+ipv6 address fd44:b065:d58b:1101::/64 eui-64
+no shut
+exit
+!
+int gi0/2
+desc CoreR1-G0/2
+no switchport
+ipv6 address fd44:b065:d58b:1102::/64 eui-64
+no shut
+exit
+!
+int gi0/3
+desc CoreR2-G0/1
+no switchport
+ipv6 address fd44:b065:d58b:1201::/64 eui-64
+no shut
+exit
+!
+int gi1/0
+desc CoreR2-G0/2
+no switchport
+ipv6 address fd44:b065:d58b:1202::/64 eui-64
+no shut
+exit
+!
+int gi1/1
+desc EdgeR1-G0/1
+no switchport
+ipv6 address fd44:b065:d58b:2100::/64 eui-64
+no shut
+exit
+!
+int gi1/2
+desc EdgeR2-G0/1
+no switchport
+ipv6 address fd44:b065:d58b:2200::/64 eui-64
+no shut
+exit
+!
+ipv6 unicast-routing
+!
+router eigrp LAB
+address-family ipv6 autonomous-system 100
+eigrp router-id 1.1.1.1
+end
