@@ -1,0 +1,22 @@
+router ospf 1
+network 10.1.2.0 0.0.0.255 area 0
+network 10.0.234.0 0.0.0.255 area 0
+exit
+!
+int gi2
+ip address 10.1.2.2 255.255.255.0
+ip ospf network point-to-point
+ip ospf 1 area 0
+no shut
+exit
+!
+int gi3
+ip address 10.0.234.2 255.255.255.0
+ip ospf 1 area 0
+no shut
+exit
+!
+int lo0
+ip address 10.0.0.2 255.255.255.255
+no shut
+exit

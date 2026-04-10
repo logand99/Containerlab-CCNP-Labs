@@ -1,0 +1,39 @@
+interface Loopback0
+ ip address 10.0.0.2 255.255.255.255
+ ip ospf 10 area 0
+
+interface GigabitEthernet2
+ ip address 10.1.2.2 255.255.255.0
+ ip ospf network point-to-point
+ ip ospf 10 area 0
+ no shut
+
+interface GigabitEthernet3
+ ip address 10.0.234.2 255.255.255.0
+ ip ospf 10 area 0
+ ip ospf cost 100
+ no shut
+
+interface GigabitEthernet5
+ ip address 100.24.100.2 255.255.255.0
+ ip ospf 10 area 0
+ no shut
+
+ip prefix-list PL_100.0.0.0 seq 5 permit 100.0.0.0/8 ge 32
+
+route-map RM_BGP->OSPF permit 10
+ match ip address prefix-list PL_100.0.0.0
+
+router bgp 10
+    bgp log-neighbor-changes
+    neighbor 100.24.100.100 remote-as 100
+    address-family ipv4
+        redistribute ospf 10
+        neighbor 100.24.100.100 activate
+    exit-address-family
+
+router ospf 10
+ redistribute bgp 10 route-map RM_BGP->OSPF
+ summary-address 100.0.0.0 255.255.255.0
+ default-information originate always
+ router-id 10.0.0.2

@@ -1,0 +1,34 @@
+interface Loopback0
+ ip address 10.0.0.51 255.255.255.255
+ ip ospf 10 area 51
+
+interface Loopback2
+ ip address 10.0.51.51 255.255.255.255
+ ip ospf 10 area 51
+
+interface GigabitEthernet2
+ ip address 10.5.51.51 255.255.255.0
+ ip ospf network point-to-point
+ ip ospf 10 area 51
+ no shut
+
+interface GigabitEthernet3
+ ip address 10.6.51.51 255.255.255.0
+ ip ospf network point-to-point
+ ip ospf 10 area 51
+ no shut
+
+interface GigabitEthernet4
+ ip address 10.51.52.51 255.255.255.0
+ ip ospf network point-to-point
+ ip ospf 10 area 51
+ no shut
+
+interface GigabitEthernet5
+ ip address 10.48.51.51 255.255.255.0
+ ip ospf network point-to-point
+ ip ospf 10 area 51
+ no shut
+
+router ospf 10
+ router-id 10.0.0.51

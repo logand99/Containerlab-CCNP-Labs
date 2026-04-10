@@ -1,0 +1,32 @@
+interface Loopback0
+ ip address 10.0.0.5 255.255.255.255
+ ip ospf 10 area 0
+
+interface Loopback1
+ ip address 100.0.0.15 255.255.255.255
+
+interface GigabitEthernet2
+ ip address 10.5.51.5 255.255.255.0
+ ip ospf network point-to-point
+ ip ospf 10 area 51
+ no shut
+
+interface GigabitEthernet3
+ ip address 10.5.52.5 255.255.255.0
+ ip ospf network point-to-point
+ ip ospf 10 area 51
+ no shut
+
+interface GigabitEthernet4
+ ip address 10.4.5.5 255.255.255.0
+ ip ospf network point-to-point
+ ip ospf 10 area 0
+ no shut
+
+route-map RM_CONN->OSPF permit 10
+ match interface Loopback1
+
+router ospf 10
+ redistribute connected route-map RM_CONN->OSPF
+ area 51 nssa default-information-originate
+ router-id 10.0.0.5

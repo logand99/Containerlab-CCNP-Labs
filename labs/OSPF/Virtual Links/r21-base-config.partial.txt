@@ -1,0 +1,16 @@
+interface Loopback0
+ ip address 10.0.0.21 255.255.255.255
+ ip ospf 10 area 2
+
+interface Loopback1
+ ip address 100.0.0.251 255.255.255.255
+
+interface GigabitEthernet3
+ ip address 10.1.21.21 255.255.255.0
+ ip ospf network point-to-point
+ ip ospf 10 area 2
+ no shut
+
+router ospf 10
+ area 2 stub
+ router-id 10.0.0.21
